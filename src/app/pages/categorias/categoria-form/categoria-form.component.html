@@ -5,7 +5,6 @@
     <li class="breadcrumb-item "  >Formulário de categoria</li>
   </ol>
 </nav>
-
 <div class="row mb-3">
   <div class="col-md">
     <h1 class="h2">Formularios de categoria</h1>
@@ -18,21 +17,21 @@
 </div>
 
 
-<form >
+<form [formGroup]="categoriaForm">
   <div class="card" >
 
     <div class="card-header">
-      Informações sobre a categoria
+      {{ pageTitle }}
     </div>
     <div class="card-body">
       <div class="row">
         <div class="col-md-6">
           <label for="nome" class="form-label">Nome</label>
-          <input type="text" class="form-control" id="nome" >       
+          <input type="text" class="form-control" id="nome" formControlName="nome">       
         </div>
         <div class="col-md-6 ">
           <label for="descricao" class="form-label">Descrição</label>
-          <input type="text" class="form-control" id="descricao">
+          <input type="text" class="form-control" id="descricao" formControlName="descricao">
         </div>    
       </div>
     </div>
