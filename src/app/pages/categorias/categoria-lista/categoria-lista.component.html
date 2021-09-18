@@ -24,35 +24,16 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><strong>Lazer</strong>
+    <tr *ngFor="let categoria of listaCategoria">
+      <td><strong>{{ categoria.nome }} </strong>
       <br>
-      <small>Cinema, parque, praia, etc</small>
+      <small>{{ categoria.descricao }}</small>
       </td>    
       <td>
-        <a [routerLink]="[12, 'edit']"  class="btn btn-outline-info btn-sm me-2"> Editar</a>
-        <a  class="btn btn-outline-danger btn-sm"> Excluir</a>
+        <a [routerLink]="[categoria.id, 'edit']"  class="btn btn-outline-info btn-sm me-2"> Editar</a>
+        <a (click)="deleteCategoria(categoria)" class="btn btn-outline-danger btn-sm"> Excluir</a>
       </td>
     </tr>
-    <tr>
-      <td><strong>Lazer</strong>
-      <br>
-      <small>Cinema, parque, praia, etc</small>
-      </td>    
-      <td>
-        <a [routerLink]="[12, 'edit']"  class="btn btn-outline-info btn-sm me-2"> Editar</a>
-        <a  class="btn btn-outline-danger btn-sm"> Excluir</a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Lazer</strong>
-      <br>
-      <small>Cinema, parque, praia, etc</small>
-      </td>    
-      <td>
-        <a [routerLink]="[12, 'edit']"  class="btn btn-outline-info btn-sm me-2"> Editar</a>
-        <a  class="btn btn-outline-danger btn-sm"> Excluir</a>
-      </td>
-    </tr>
+
   </tbody>
 </table>

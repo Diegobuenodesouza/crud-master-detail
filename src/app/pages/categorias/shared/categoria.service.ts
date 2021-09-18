@@ -18,7 +18,7 @@ export class CategoriaService {
   getAll(): Observable<Categoria[]>{
     return this.http.get<Categoria[]>(this.apiPath).pipe(
       catchError(this.handleErro),
-      map(this.jsonDataToCategorias)
+      map((this.jsonDataToCategorias))
     )
   }
 
@@ -53,9 +53,7 @@ export class CategoriaService {
   // Métodos privados
 
   private jsonDataToCategorias(jsonData: any[]): Categoria[]{
-    const categorias: Categoria[] = [];
-    jsonData.forEach(element => categorias.push(this.jsonDataToCategoria(element)));
-    return categorias;
+    return jsonData as Categoria[]
   }
 
   private jsonDataToCategoria(jsonData: any): Categoria{
