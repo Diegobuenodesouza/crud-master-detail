@@ -1,1 +1,45 @@
-<p>categoria-form works!</p>
+<nav class="mb-4">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item " [routerLink]="['/categorias']"  >Categorias</li>
+    <li class="breadcrumb-item "  >Formulário de categoria</li>
+  </ol>
+</nav>
+
+<div class="row mb-3">
+  <div class="col-md">
+    <h1 class="h2">Formularios de categoria</h1>
+  </div>
+  <div class="col-md">    
+      <a [routerLink]="['/']"   class="btn btn-light float-end " >
+      << Voltar
+      </a>
+  </div>
+</div>
+
+
+<form >
+  <div class="card" >
+
+    <div class="card-header">
+      Informações sobre a categoria
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <label for="nome" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="nome" >       
+        </div>
+        <div class="col-md-6 ">
+          <label for="descricao" class="form-label">Descrição</label>
+          <input type="text" class="form-control" id="descricao">
+        </div>    
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <button type="submit" class="btn btn-primary float-end">Cadastrar</button>
+    </div>
+
+  </div>
+</form>

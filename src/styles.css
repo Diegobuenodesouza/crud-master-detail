@@ -3,3 +3,7 @@
   padding: .8rem;
   border-radius: 10px;
 }
+
+.breadcrumb-item:hover{
+  cursor: pointer;
+}
