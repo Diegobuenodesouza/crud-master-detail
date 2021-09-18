@@ -1,6 +1,11 @@
 {
   "categorias": [
     {
+      "id": 1,
+      "nome": "Moradia (editado)",
+      "descricao": "Pagamentos de Contas da Casa (editato)"
+    },
+    {
       "id": 2,
       "nome": "Saúde",
       "descricao": "Plano de Saúde e Remédios"
@@ -19,6 +24,11 @@
       "id": 5,
       "nome": "Freelas",
       "descricao": "Trabalhos como freelancer"
+    },
+    {
+      "id": 6,
+      "nome": "Alimentação  (editato)",
+      "descricao": "comida, mc, whey (editato)"
     }
   ]
 }

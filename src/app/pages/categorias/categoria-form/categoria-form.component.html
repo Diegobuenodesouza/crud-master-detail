@@ -7,7 +7,7 @@
 </nav>
 <div class="row mb-3">
   <div class="col-md">
-    <h1 class="h2">Formularios de categoria</h1>
+    <h1 class="h2">{{ pageTitle }}</h1>
   </div>
   <div class="col-md">    
       <a [routerLink]="['/']"   class="btn btn-light float-end " >
@@ -17,27 +17,29 @@
 </div>
 
 
-<form [formGroup]="categoriaForm">
+<form [formGroup]="categoriaForm" (submit)="submitCategoria()">
   <div class="card" >
-
-    <div class="card-header">
-      {{ pageTitle }}
-    </div>
     <div class="card-body">
       <div class="row">
         <div class="col-md-6">
-          <label for="nome" class="form-label">Nome</label>
-          <input type="text" class="form-control" id="nome" formControlName="nome">       
+          <label for="nome" class="form-label">Nome <span>*</span></label>
+          <input type="text" class="form-control" id="nome" formControlName="nome">   
+          
+          <div class="text-danger" *ngIf="categoriaForm.get('nome')?.invalid && categoriaForm.get('nome')?.touched ">
+            <div *ngIf="categoriaForm.get('nome')?.errors?.required">Dado Obrigatorio</div>
+            <div *ngIf="categoriaForm.get('nome')?.errors?.minlength">Deve ter no mininmo 2 caracteres</div>
+          </div>
         </div>
         <div class="col-md-6 ">
-          <label for="descricao" class="form-label">Descrição</label>
+          <label for="descricao" class="form-label">Descrição <span>*</span></label>
           <input type="text" class="form-control" id="descricao" formControlName="descricao">
         </div>    
       </div>
     </div>
 
     <div class="card-footer">
-      <button type="submit" class="btn btn-primary float-end">Cadastrar</button>
+      <button type="submit" class="btn btn-primary float-end" [disabled]="submitForm || categoriaForm.invalid" >{{ textBtn}}</button>
+     
     </div>
 
   </div>

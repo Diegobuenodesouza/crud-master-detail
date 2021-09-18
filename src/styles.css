@@ -1,3 +1,5 @@
+@import '~ngx-toastr/toastr';
+
 .breadcrumb{
   background-color: rgb(233, 224, 224);
   padding: .8rem;
