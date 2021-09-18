@@ -1,5 +1,5 @@
 {
-  "categorias": [
+  "categorias":  [
     { "id": 1, "nome": "Moradia", "descricao": "Pagamentos de Contas da Casa" },
     { "id": 2, "nome": "Saúde", "descricao": "Plano de Saúde e Remédios" },
     { "id": 3, "nome": "Lazer", "descricao": "Cinea, parques, praia, etc" },
